@@ -1,0 +1,181 @@
+{
+  "when": "2026-10-08T13:21:29",
+  "base": "http://127.0.0.1:3090",
+  "note": "redacted: receipt metadata + veripipe_receipt call/result text only",
+  "session1": {
+    "turns": [
+      {
+        "scenario": "a all-completed->pass",
+        "receipts": [
+          {
+            "turn": 1,
+            "endReason": "completed",
+            "todos": {
+              "total": 3,
+              "completed": 3,
+              "inProgress": 0,
+              "pending": 0
+            },
+            "goal": null,
+            "verdict": {
+              "planComplete": "pass"
+            }
+          }
+        ]
+      },
+      {
+        "scenario": "b one-incomplete->fail",
+        "receipts": [
+          {
+            "turn": 1,
+            "endReason": "completed",
+            "todos": {
+              "total": 3,
+              "completed": 3,
+              "inProgress": 0,
+              "pending": 0
+            },
+            "goal": null,
+            "verdict": {
+              "planComplete": "pass"
+            }
+          },
+          {
+            "turn": 2,
+            "endReason": "completed",
+            "todos": {
+              "total": 3,
+              "completed": 2,
+              "inProgress": 0,
+              "pending": 1
+            },
+            "goal": null,
+            "verdict": {
+              "planComplete": "fail"
+            }
+          }
+        ]
+      },
+      {
+        "scenario": "d agent-calls-tool",
+        "receipts": [
+          {
+            "turn": 1,
+            "endReason": "completed",
+            "todos": {
+              "total": 3,
+              "completed": 3,
+              "inProgress": 0,
+              "pending": 0
+            },
+            "goal": null,
+            "verdict": {
+              "planComplete": "pass"
+            }
+          },
+          {
+            "turn": 2,
+            "endReason": "completed",
+            "todos": {
+              "total": 3,
+              "completed": 2,
+              "inProgress": 0,
+              "pending": 1
+            },
+            "goal": null,
+            "verdict": {
+              "planComplete": "fail"
+            }
+          },
+          {
+            "turn": 3,
+            "endReason": "completed",
+            "todos": null,
+            "goal": null,
+            "verdict": {
+              "planComplete": "inconclusive"
+            }
+          }
+        ],
+        "veripipe_tool_events": []
+      }
+    ]
+  },
+  "session2": {
+    "turns": [
+      {
+        "scenario": "c-t1 goal+1-completed->pass",
+        "receipts": [
+          {
+            "turn": 1,
+            "endReason": "completed",
+            "todos": {
+              "total": 1,
+              "completed": 1,
+              "inProgress": 0,
+              "pending": 0
+            },
+            "goal": {
+              "id": "goal-dd140f90-01b5-48b6-8d61-b2a33fd154c8",
+              "phase": "active",
+              "revision": 1
+            },
+            "verdict": {
+              "planComplete": "pass"
+            }
+          }
+        ],
+        "goal_readback_id": "goal-dd140f90-01b5-48b6-8d61-b2a33fd154c8"
+      },
+      {
+        "scenario": "c-t2 survives-next-turn/start",
+        "receipts": [
+          {
+            "turn": 1,
+            "endReason": "completed",
+            "todos": {
+              "total": 1,
+              "completed": 1,
+              "inProgress": 0,
+              "pending": 0
+            },
+            "goal": {
+              "id": "goal-dd140f90-01b5-48b6-8d61-b2a33fd154c8",
+              "phase": "active",
+              "revision": 1
+            },
+            "verdict": {
+              "planComplete": "pass"
+            }
+          }
+        ],
+        "turn1_receipt_after_turn2": {
+          "turn": 1,
+          "endReason": "completed",
+          "todos": {
+            "total": 1,
+            "completed": 1,
+            "inProgress": 0,
+            "pending": 0
+          },
+          "goal": {
+            "id": "goal-dd140f90-01b5-48b6-8d61-b2a33fd154c8",
+            "phase": "active",
+            "revision": 1
+          },
+          "verdict": {
+            "planComplete": "pass"
+          }
+        }
+      }
+    ]
+  },
+  "checks": {
+    "a_pass": true,
+    "b_fail": true,
+    "d_tool_called": false,
+    "d_three_receipts": true,
+    "c_t1_pass_goal": true,
+    "c_t2_survives": false
+  }
+}

@@ -1,0 +1,6 @@
+# The dsh-veripipe bundle layer: inserted when a profile lists this bundle in
+# its dsh.profile.bundles. One row mounting the plugin module by package name,
+# so Node resolution finds the installed code. The plugin needs no config.
+- insert:
+    - id: veripipe
+      name: dsh-veripipe

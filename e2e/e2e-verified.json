@@ -1,0 +1,201 @@
+{
+  "source": "server-folded veripipeReceipts.val (durable projcache)",
+  "redaction": "counts/verdicts/turns + goal id/phase/revision + tool summary line only",
+  "conclusions": {
+    "a_all_completed_pass": "session-247c78db-ecec-402c-807f-338efcc6ad93.json",
+    "b_incomplete_fail": "session-247c78db-ecec-402c-807f-338efcc6ad93.json",
+    "c2_receipt_survives_next_turn_start": "session-247c78db-ecec-402c-807f-338efcc6ad93.json",
+    "c1_goal_plus_completed_pass": "session-45a5d93b-dcc3-4133-b738-92991176c598.json",
+    "e_empty_before_first_turn_end": "session-9006a93b-a6d7-4c72-b450-1cc50e8a03d0.json",
+    "d_agent_tool_call_correct": {
+      "session": "session-fedc831c-db4a-402a-81f8-aef09b19747e.json",
+      "returns": [
+        "Returned 2 of 2 receipt(s). Latest: turn 2 → fail"
+      ]
+    }
+  },
+  "sessions": {
+    "session-247c78db-ecec-402c-807f-338efcc6ad93.json": {
+      "turns_started": 3,
+      "last_turn": 3,
+      "turnTodos_set": false,
+      "receipts": [
+        {
+          "turn": 1,
+          "endReason": "completed",
+          "todos": {
+            "total": 3,
+            "completed": 3,
+            "inProgress": 0,
+            "pending": 0
+          },
+          "goal": null,
+          "verdict": {
+            "planComplete": "pass"
+          }
+        },
+        {
+          "turn": 2,
+          "endReason": "completed",
+          "todos": {
+            "total": 3,
+            "completed": 2,
+            "inProgress": 0,
+            "pending": 1
+          },
+          "goal": null,
+          "verdict": {
+            "planComplete": "fail"
+          }
+        },
+        {
+          "turn": 3,
+          "endReason": "completed",
+          "todos": null,
+          "goal": null,
+          "verdict": {
+            "planComplete": "inconclusive"
+          }
+        }
+      ],
+      "veripipe_receipt_returns": []
+    },
+    "session-45a5d93b-dcc3-4133-b738-92991176c598.json": {
+      "turns_started": 3,
+      "last_turn": 3,
+      "turnTodos_set": false,
+      "receipts": [
+        {
+          "turn": 1,
+          "endReason": "completed",
+          "todos": {
+            "total": 1,
+            "completed": 1,
+            "inProgress": 0,
+            "pending": 0
+          },
+          "goal": {
+            "id": "goal-121e53b1-0b66-4c49-a54e-57fda250bc6e",
+            "phase": "active",
+            "revision": 1
+          },
+          "verdict": {
+            "planComplete": "pass"
+          }
+        },
+        {
+          "turn": 2,
+          "endReason": "completed",
+          "todos": {
+            "total": 3,
+            "completed": 3,
+            "inProgress": 0,
+            "pending": 0
+          },
+          "goal": {
+            "id": "goal-121e53b1-0b66-4c49-a54e-57fda250bc6e",
+            "phase": "complete",
+            "revision": 2
+          },
+          "verdict": {
+            "planComplete": "pass"
+          }
+        },
+        {
+          "turn": 3,
+          "endReason": "completed",
+          "todos": null,
+          "goal": {
+            "id": "goal-121e53b1-0b66-4c49-a54e-57fda250bc6e",
+            "phase": "complete",
+            "revision": 2
+          },
+          "verdict": {
+            "planComplete": "inconclusive"
+          }
+        }
+      ],
+      "veripipe_receipt_returns": []
+    },
+    "session-9006a93b-a6d7-4c72-b450-1cc50e8a03d0.json": {
+      "turns_started": 0,
+      "last_turn": null,
+      "turnTodos_set": false,
+      "receipts": [],
+      "veripipe_receipt_returns": []
+    },
+    "session-c97e47e3-7701-466b-820e-2aaffd3c9c96.json": {
+      "turns_started": 2,
+      "last_turn": 2,
+      "turnTodos_set": false,
+      "receipts": [
+        {
+          "turn": 1,
+          "endReason": "completed",
+          "todos": {
+            "total": 1,
+            "completed": 1,
+            "inProgress": 0,
+            "pending": 0
+          },
+          "goal": {
+            "id": "goal-dd140f90-01b5-48b6-8d61-b2a33fd154c8",
+            "phase": "active",
+            "revision": 1
+          },
+          "verdict": {
+            "planComplete": "pass"
+          }
+        }
+      ],
+      "veripipe_receipt_returns": []
+    },
+    "session-fedc831c-db4a-402a-81f8-aef09b19747e.json": {
+      "turns_started": 3,
+      "last_turn": 3,
+      "turnTodos_set": false,
+      "receipts": [
+        {
+          "turn": 1,
+          "endReason": "completed",
+          "todos": {
+            "total": 3,
+            "completed": 3,
+            "inProgress": 0,
+            "pending": 0
+          },
+          "goal": null,
+          "verdict": {
+            "planComplete": "pass"
+          }
+        },
+        {
+          "turn": 2,
+          "endReason": "completed",
+          "todos": {
+            "total": 3,
+            "completed": 2,
+            "inProgress": 0,
+            "pending": 1
+          },
+          "goal": null,
+          "verdict": {
+            "planComplete": "fail"
+          }
+        },
+        {
+          "turn": 3,
+          "endReason": "completed",
+          "todos": null,
+          "goal": null,
+          "verdict": {
+            "planComplete": "inconclusive"
+          }
+        }
+      ],
+      "veripipe_receipt_returns": [
+        "Returned 2 of 2 receipt(s). Latest: turn 2 → fail"
+      ]
+    }
+  }
+}

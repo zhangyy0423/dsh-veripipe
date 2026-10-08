@@ -1,0 +1,13 @@
+# Dev-only dependency links for type-checking against the sibling harness
+# checkout; never published and never required at runtime (the host dsh
+# installation provides the @deepseek-ai/* peers).
+/node_modules/
+
+# End-to-end sandbox: an isolated DSH_HOME created by the e2e script.
+/.e2e-home/
+
+# Build caches.
+*.tsbuildinfo
+
+# Packed tarballs (npm pack); attach to a GitHub Release instead of committing.
+*.tgz
