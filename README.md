@@ -83,7 +83,7 @@ Receipts store **counts and identifiers only**. The fold never records prompts, 
 
 ## Relation to veripipe
 
-`veripipe` is an external verification pipeline that judges whether an agent actually completed the task it was given. Its dsh adapter reads a session's state after the run. Because the stock `todos` projection is cleared at the next `turn/start`, a between-turns read cannot distinguish a finished plan from an abandoned one. This plugin closes that gap on the dsh side: it exposes a durable, fail-closed, counts-only completion signal per turn that such a verifier can read without re-deriving history or touching private content. The plugin is independently useful without veripipe — it is a general turn-completion ledger — and is maintained separately from the harness.
+[`veripipe`](https://github.com/zhangyy0423/veripipe) is an external verification pipeline that judges whether an agent actually completed the task it was given. Its dsh adapter reads a session's state after the run. Because the stock `todos` projection is cleared at the next `turn/start`, a between-turns read cannot distinguish a finished plan from an abandoned one. This plugin closes that gap on the dsh side: it exposes a durable, fail-closed, counts-only completion signal per turn that such a verifier can read without re-deriving history or touching private content. The plugin is independently useful without veripipe — it is a general turn-completion ledger — and is maintained separately from the harness.
 
 ## Development
 
